@@ -44,7 +44,7 @@ func (d *Data) Dick(c tele.Context) error {
 		} else if newRange > 0 {
 			retMessage = fmt.Sprintf("%s %s, твой писюн сегодня подрос на %d см. Сейчас он равен %d см.", fName, lName, newRange, newSize)
 		} else if newRange < 0 {
-			retMessage = fmt.Sprintf("%s %s,тТвой писюн сегодня сократился на %d см. Сейчас он равен %d см.", fName, lName, -newRange, newSize)
+			retMessage = fmt.Sprintf("%s %s, твой писюн сегодня сократился на %d см. Сейчас он равен %d см.", fName, lName, -newRange, newSize)
 		}
 		d.Db.DB.Model(&user).Update("is_blocked", true)
 	}
