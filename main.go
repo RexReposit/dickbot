@@ -8,12 +8,14 @@ import (
 	tele "gopkg.in/telebot.v4"
 )
 
+var yourToken = ""
+
 func main() {
 	dataHandler := handlers.Data{}
 	dataHandler.InitDB()
 
 	pref := tele.Settings{
-		Token:  "7757765456:AAFpFXhbi9XCfgRt7P3OT3F_jrBBplubWZA",
+		Token:  yourToken,
 		Poller: &tele.LongPoller{Timeout: 10 * time.Second},
 	}
 
